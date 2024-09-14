@@ -4,6 +4,7 @@ import datetime
 import getpass
 import json
 import urllib.parse
+import os
 
 from telethon import TelegramClient, sync
 from telethon.errors.rpcerrorlist import SessionPasswordNeededError
@@ -26,8 +27,8 @@ parser.add_argument('-p', '--phone', type=str, help='The phone number of the use
 parser.add_argument('-l', '--url', type=str, help='The URL of a message sent by the user in a public channel or group')
 args = parser.parse_args()
 
-api_id = "********" 
-api_hash = "-----------------------------" 
+api_id = int(os.environ.get('TELEGRAM_API_ID'))
+api_hash = os.environ.get('TELEGRAM_API_HASH')
 phone = "+00000000000"
 client = TelegramClient('session_name', api_id, api_hash)
 
