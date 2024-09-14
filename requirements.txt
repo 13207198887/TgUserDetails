@@ -1,0 +1,5 @@
+# requirements.txt
+python>=3.8
+telethon
+argparse
+colorama
