@@ -29,7 +29,7 @@ args = parser.parse_args()
 
 api_id = int(os.environ.get('TELEGRAM_API_ID'))
 api_hash = os.environ.get('TELEGRAM_API_HASH')
-phone = "+00000000000"
+phone = os.environ.get('TELEGRAM_PHONE_NUMBER')
 client = TelegramClient('session_name', api_id, api_hash)
 
 client.connect()
