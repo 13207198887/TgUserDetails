@@ -4,7 +4,12 @@ import datetime
 import getpass
 import json
 import urllib.parse
+import os
 
+# 从环境变量获取验证码
+code = os.getenv('TELEGRAM_CODE')
+if not code:
+    raise Exception("No Telegram code provided. Set the TELEGRAM_CODE environment variable.")
 from telethon import TelegramClient, sync
 from telethon.errors.rpcerrorlist import SessionPasswordNeededError
 from telethon.tl.functions.channels import GetFullChannelRequest
