@@ -5,7 +5,7 @@ import os
 import json
 import urllib.parse
 
-from telethon import T sync
+from telethon import TelegramClient, sync
 from telethon.errors.rpcerrorlist import SessionPasswordNeededError
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.contacts import ImportContacts DeleteContactsRequest
