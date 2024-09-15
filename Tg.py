@@ -30,7 +30,7 @@ api_id = '25642744'
 api_hash = '416175f9992fe4b97abc2d9277845be3'
 phone = '+6282350877054'
 username = 'safas234d'
-client = TelegramClient('E:\QQPCMgr\Desktop\qq5qq55555555555\session_name.session', api_id, api_hash)
+client = TelegramClient('session_name.session', api_id, api_hash)
 
 client.connect()
 
