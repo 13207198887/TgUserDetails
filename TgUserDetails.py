@@ -8,11 +8,13 @@ import urllib.parse
 from telethon import TelegramClient, sync
 from telethon.errors.rpcerrorlist import SessionPasswordNeededError
 from telethon.tl.functions.channels import GetFullChannelRequest
-from telethon.tl.functions.contacts import ImportContacts DeleteContactsRequest
+from telethon.tl.functions.contacts import ImportContactsRequest, DeleteContactsRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import InputPhoneContact, InputUser
 from telethon.tl.types import PeerUser, PeerChat, PeerChannel
 from telethon.tl.types import UserStatusEmpty, UserStatusOnline, UserStatusOffline, UserStatusRecently, UserStatusLastWeek, UserStatusLastMonth
+
+from urllib.parse import urljoin, urlparse
 
 colorama.init()
 
