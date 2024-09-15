@@ -19,14 +19,18 @@ from urllib.parse import urljoin, urlparse
 colorama.init()
 
 parser = argparse.ArgumentParser(description='Get information about a Telegram user, channel group.')
-parser.add_argument('-u', '--username', type=str, help='The username (with without the @ symbol)')
-parser.add_argument('-i', '--id', type=int, help='The ID (a numerical value)')
+parser.add_argument('-u', '--username', type=str, help='The username (with or without the @ symbol)')
+parser.add_argument('-i', '--id', type=int, (a numerical value)')
 parser.add_argument('-p', '--phone', type=str, help='The phone number (with the country code)')
 parser.add_argument('-l', '--url', type=str, help='The URL of a message in a public channel or group')
-args = parser.parse_args()_id = int(os.environ.get('TELEGRAM_API_ID'))
+args = parser.parse_args()
+
+api_id = int(os.environ.get('TELEGRAM_API_ID'))
 api_hash = os.environ.get('TELEGRAM_API_HASH')
 phone = os.environ.get('TELEGRAM_PHONE_NUMBER')
 code = os.environ.get('TELEGRAM_CODE')
+
+# 其余代码保持不变
 
 client = TelegramClient('session_name', api_id, api_hash)
 
